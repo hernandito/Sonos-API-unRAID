@@ -9,10 +9,9 @@ COPY sources.list /etc/apt/
 ENV APTLIST="wget mc git tar pip curl screen inotify-tools nano zip python-setuptools python-dev build-essential"
 
 # install main packages
-RUN apt-get update -q && \
-apt-get install $APTLIST -qy && \
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
-apt-get install -y nodejs
+RUN apt-get update 
+RUN apt-get install wget mc git tar pip curl screen inotify-tools nano zip python-setuptools python-dev build-essential -qy 
+
 
 # cleanup
 RUN apt-get clean -y && \

@@ -1,5 +1,12 @@
 #!/bin/bash
 
+url -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
+apt-get install -y nodejs
+
+node -v
+npm -v
+
+
 if [ ! -f /app/settings/settings.json]; then
 	echo "================================================"
 	echo " Creating settings.json file "
