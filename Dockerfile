@@ -9,15 +9,10 @@ COPY sources.list /etc/apt/
 ENV APTLIST="wget mc git tar pip curl screen inotify-tools nano zip python-setuptools python-dev build-essential"
 
 # install main packages
-RUN apt-get update -q 
-RUN apt-get install $APTLIST -qy 
-
-RUN curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-RUN apt-get install -y nodejs
-
-#RUN cd /
-#RUN npm install https://github.com/jishi/node-sonos-http-api
-
+RUN apt-get update -q && \
+apt-get install $APTLIST -qy && \
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
+apt-get install -y nodejs
 
 # cleanup
 RUN apt-get clean -y && \
