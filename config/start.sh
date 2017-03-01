@@ -25,7 +25,11 @@ if [ ! -f /app/presets/presets.json]; then
 fi
 
 
-npm start
+cd /
+npm install https://github.com/jishi/node-sonos-http-api
+
+
+#npm start
 
 
 
