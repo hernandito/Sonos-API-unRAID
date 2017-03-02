@@ -10,7 +10,7 @@ COPY sources.list /etc/apt/
 ADD config/ /root/
 
 # add local files
-COPY root/ /
+#COPY root/ /
 COPY root/settings.json /app/settings/settings.json
 COPY root/presets.json /app/presets/presets.json
 
