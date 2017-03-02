@@ -9,10 +9,12 @@ COPY sources.list /etc/apt/
 
 ADD config/ /root/
 
+RUN mkdir -p /app
+
 # add local files
 #COPY root/ /
-COPY root/settings.json /app/settings/settings.json
-COPY root/presets.json /app/presets/presets.json
+COPY /root/settings.json /app/settings/settings.json
+COPY /root/presets.json /app/presets/presets.json
 
 
 
