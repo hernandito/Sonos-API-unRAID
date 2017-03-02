@@ -53,7 +53,7 @@ fi
 cd /
 npm install https://github.com/jishi/node-sonos-http-api
 
-
+#screen -dm -S screenName /
 #npm start
 
 

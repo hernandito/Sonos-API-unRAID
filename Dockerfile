@@ -15,8 +15,8 @@ RUN mkdir -p /app/presets
 
 # add local files
 #COPY root/ /
-COPY /root/settings.json /app/settings/settings.json
-COPY /root/presets.json /app/presets/presets.json
+ADD config/settings.json /app/settings/settings.json
+ADD config/presets.json /app/presets/presets.json
 
 
 
