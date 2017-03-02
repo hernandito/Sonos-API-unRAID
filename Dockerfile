@@ -8,18 +8,12 @@ COPY sources.list /etc/apt/
 
 ENV APTLIST="wget mc git tar pip curl screen inotify-tools nano zip python-setuptools python-dev build-essential"
 
-# install main packages
-RUN apt-get update 
-RUN apt-get install wget mc git tar pip curl screen inotify-tools nano zip python-setuptools python-dev build-essential -qy 
 
 
-# cleanup
-RUN apt-get clean -y && \
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir -p /app/settings
-RUN mkdir -p /app/presets
-RUN chmod -R 777 /app/
+
+
+
 
 ADD config/ /root/
 
