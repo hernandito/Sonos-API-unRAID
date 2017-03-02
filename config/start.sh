@@ -11,9 +11,8 @@ apt-get clean -y
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
-RUN mkdir -p /app/settings
-RUN mkdir -p /app/presets
-RUN chmod -R 777 /app/
+
+chmod -R 777 /app/
 
 url -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
 apt-get install -y nodejs
