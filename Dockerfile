@@ -1,18 +1,10 @@
 FROM linuxserver/baseimage.apache
 MAINTAINER hernandito
 
-WORKDIR /app
+
 
 # copy sources.list
 COPY sources.list /etc/apt/
-
-ENV APTLIST="wget mc git tar pip curl screen inotify-tools nano zip python-setuptools python-dev build-essential"
-
-
-
-
-
-
 
 
 ADD config/ /root/
