@@ -10,6 +10,8 @@ COPY sources.list /etc/apt/
 ADD config/ /root/
 
 RUN mkdir -p /app
+RUN mkdir -p /app/settings
+RUN mkdir -p /app/presets
 
 # add local files
 #COPY root/ /
