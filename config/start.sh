@@ -30,10 +30,6 @@ if [ ! -f /app/settings/settings.json]; then
 	
 	echo " Done"
 	echo "================================================" 
-	
-	mkdir -p /app/settings
-	mkdir -p /app/presets
-	chmod -R 777 /app/
 fi
 
 echo " " 

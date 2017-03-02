@@ -20,8 +20,8 @@ ADD config/presets.json /app/presets/presets.json
 
 
 
-ADD config/start.sh /etc/my_init.d/firstrun.sh
-RUN chmod +x /etc/my_init.d/firstrun.sh
+ADD config/start.sh /etc/my_init.d/start.sh
+RUN chmod +x /etc/my_init.d/start.sh
 
 
 
